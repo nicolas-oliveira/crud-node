@@ -4,7 +4,7 @@ Crie uma aplicação para armazenar projetos e suas tarefas do zero utilizando [
 
 ### Rotas
 
-- `POST /projects`: A rota deve receber `id` e `title` dentro do corpo e cadastrar um novo projeto dentro de um array no seguinte formato: `{ id: "1", title: 'Novo projeto', tasks: [] }`; Certifique-se de enviar tanto o ID quanto o título do projeto no formato string com aspas duplas.
+- `POST /projects`: A rota deve receber `id` e `title` dentro do corpo e cadastrar um novo projeto dentro de um array no seguinte formato: `{ "id": "1", "title": "Novo projeto", "tasks": [] }`; Certifique-se de enviar tanto o ID quanto o título do projeto no formato string com aspas duplas.
 
 - `GET /projects`: Rota que lista todos projetos e suas tarefas;
 
@@ -16,14 +16,14 @@ Crie uma aplicação para armazenar projetos e suas tarefas do zero utilizando [
 
 ### Exemplo
 
-Se eu chamar a rota `POST /projects` repassando `{ id: 1, title: 'Novo projeto' }` e a rota `POST /projects/1/tasks` com `{ title: 'Nova tarefa' }`, meu array de projetos deve ficar assim:
+Se eu chamar a rota `POST /projects` repassando `{ "id": "1", "title": "Novo projeto" }` e a rota `POST /projects/1/tasks` com `{ "title": "Nova tarefa" }`, meu array de projetos deve ficar assim:
 
 ```js
 [
   {
-    id: "1",
-    title: "Novo projeto",
-    tasks: ["Nova tarefa"]
+    "id": "1",
+    "title": "Novo projeto",
+    "tasks": ["Nova tarefa"]
   }
 ];
 ```
